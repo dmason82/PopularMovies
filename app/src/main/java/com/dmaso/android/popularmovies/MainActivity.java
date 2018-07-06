@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
         Log.v(this.getClass().getSimpleName(),"fetching movies...");
         mSortBy = preferences.getString(MOVIE_SORT_KEY,TmdbInterface.SortConstants.HIGHEST_RATED);
         Call<GetMoviesResult> getMovies = mSortBy.equals(TmdbInterface.SortConstants.HIGHEST_RATED)?
-                tmdb.getTopRatedMovies(getString(R.string.tmdb)): tmdb.getPopularMovies(getString(R.string.tmdb));
+                tmdb.getTopRatedMovies(BuildConfig.API_KEY): tmdb.getPopularMovies(BuildConfig.API_KEY);
         final MainActivity activity = this;
         final Comparator<Movie> popularity = (Movie m1, Movie m2) -> {
           return m2.getPopularity().compareTo(m1.getPopularity());

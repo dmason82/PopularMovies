@@ -10,3 +10,4 @@
 /captures
 .externalNativeBuild
 api_keys.xml
+gradle.properties

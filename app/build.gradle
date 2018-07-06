@@ -10,6 +10,10 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    // Note: Put tmdbApiKey as a string inside your global gradle.properties file in order to build.
+    buildTypes.each {
+        it.buildConfigField 'String', "API_KEY", tmdbApiKey
+    }
     buildTypes {
         release {
             minifyEnabled false
