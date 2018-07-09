@@ -9,4 +9,5 @@
     <string name="release_date_label">Release date: </string>
     <string name="average_rating_label">Average rating: </string>
     <string name="plot_synopsis_label">Plot synopsys:</string>
+    <string name="connectivity_error">You need to be conected to the internet in order to use this application</string>
 </resources>

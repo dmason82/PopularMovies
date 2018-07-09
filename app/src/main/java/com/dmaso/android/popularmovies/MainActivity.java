@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
 
             @Override
             public void onFailure(Call<GetMoviesResult> call, Throwable t) {
-                Log.e("We failed at calling", t.getMessage());
+                Snackbar.make(findViewById(R.id.main_layout),R.string.connectivity_error, Snackbar.LENGTH_LONG).show();
             }
         });
     }
